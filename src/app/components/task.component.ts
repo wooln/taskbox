@@ -24,6 +24,7 @@ import { Task } from '../models/task.model';
      </div>
      <div class="actions">
        <a *ngIf="task?.state !== 'TASK_ARCHIVED'" (click)="onPin(task.id)">
+       <!-- attr.aria-label属性可用于自动化脚本测试 -->
          <span class="icon-star" attr.aria-label="pinTask-{{ task?.id }}"></span>
        </a>
      </div>
